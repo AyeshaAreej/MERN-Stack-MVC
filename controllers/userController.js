@@ -1,22 +1,20 @@
-const Credentials = require("../models/credentials");
+const User = require("../models/users");
 
-const login = (req, res) => {
-  res.render("user/login");
-};
+
 
 const create = (req, res) => {
   res.render("user/create");
 };
 
 
-const signup = (req, res) => {
+const home = (req, res) => {
   console.log(req.body);
-  Credentials.create(req.body, (err, credentials) => {
+ Users.create(req.body, (err, credentials) => {
     if (err) {
-      return res.redirect("/signup");
+      return res.redirect("/home");
     }
-    console.log(credentials);
+    console.log(users);
     res.redirect("/");
   });
 };
-module.exports = { create, signup, login };
+module.exports = { create,home};

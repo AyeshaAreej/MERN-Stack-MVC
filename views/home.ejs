@@ -21,11 +21,13 @@
                     <table class="table table-striped text-center">
                         <thead>
                             <tr class="table-dark">
-                                <th>ID</th>
+                                <th></th>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>E-Mail</th>
                                 <th>Phone</th>
+                                <th>City</th>
+                                <th>Post Code</th>
                                 <th>Action</th>
                                 
                             </tr>
@@ -33,7 +35,7 @@
                         <tbody>
                            <% users.forEach((row,index) => { %>
                             <tr>
-                                <td><%= index %></td>
+                                <td></td>
                                 <td> <img src=" <%= row.image %>" width="50" class="img-thumbnail" alt=""/> </td>
                                 <td><%= row.name %></td>
                                 <td><%= row.email %></td>

@@ -1,6 +1,10 @@
 //defining schema
 const mongoose=require('mongoose');
 const userSchema= new mongoose.Schema({
+  image:{
+    type:String,
+    required:true,
+},
   name:{
       type:String,
       required:true,
@@ -13,15 +17,21 @@ phone:{
     type:String,
     required:true,
 },
-image:{
-    type:String,
-    required:true,
+city:{
+  type:String,
+ 
 },
-created:{
-  type:Date,
-  required:true,
-  default:Date.now,
+postcode:{
+  type:String,
+ 
 },
+country:{
+  type:String,
+ 
+},
+
+
+
 
 });
 

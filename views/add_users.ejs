@@ -15,22 +15,41 @@
     <p></p>
     
      
-    <div class="container w-25 border py-5 text-center">
+    <div class="container  border py-5 text-center">
         <form action="/add" method="post"  id="add-form"  enctype="multipart/form-data">
             
           
-            <div class="mb-3 ">
-                <!-- <label for="email1" class="form-label">Email</label> -->
-                <input class="form-control" type="text" name="name" class="form-control form-control-lg"  id="name" placeholder="Name"/>
+            <div class="mb-3 " >
+
+                <input style="width: 20;" class="form-control" type="text" name="name" class="form-control form-control-lg"  id="name" placeholder="Name"/>
+           
             </div>
             <div class="mb-3 ">
-                <!-- <label for="email1" class="form-label">Email</label> -->
+              
                 <input class="form-control" type="email" name="email" id="email1" placeholder="Email"/>
             </div>
             <div class="mb-3">
-                <!-- <label for="password1" class="form-label">password</label> -->
+
                 <input class="form-control" type="number" name="phone" id="phnnumber" placeholder="Phone Number"/>
             </div>
+            <div class="mb-3">
+
+                <input class="form-control" type="text" name="city" id="city" placeholder="City"/>
+            </div>
+            <div class="mb-3">
+
+                <input class="form-control" type="number" name="postcode" id="postcode" placeholder="Post Code"/>
+            </div>
+            <div class="mb-3">
+
+                <input class="form-control" type="text" name="state" id="state" placeholder="State"/>
+            </div>
+
+            <div class="mb-3">
+
+                <input class="form-control" type="text" name="country" id="country" placeholder="Country"/>
+            </div>
+
             <div class="mb-3 ">
                 <label for="image" class="form-label">Select Image</label>
                 <input type="file" name="image"/> 
@@ -39,6 +58,7 @@
                 <button class="btn btn-primary" type="submit" name="submit" >Add User</button>
     
             </div>
+            
         </form>
     </div>
     

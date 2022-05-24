@@ -1,15 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const Product= require('./Product') 
-const Credentials=require('./models/credentials');
-// const session= require('express-session');
 const mongoose= require('mongoose');
 const User=require('./models/users');
 const multer=require('multer');
 const fileUpload = require("express-fileupload");
 const fs=require('fs');
-
 const userController = require("./controllers/userController");
 
 //mongoose
@@ -17,9 +13,7 @@ const app=express();
 const PORT= process.env.PORT || 4000;
 
 
-//database connection
-//mongoose.connect("mongodb://127.0.0.1:27017/node_crud");
-// or
+
 mongoose.connect(process.env.DB_URI , { useNewUrlParser: true });
 const db=mongoose.connection;
 db.on('error', (error)=> console.log(error));
@@ -118,6 +112,10 @@ User.findByIdAndUpdate(id,{
     name:req.body.name,
     email:req.body.email,
     phone:req.body.phone,
+    city:req.body.city,
+    postcode:req.body.postcode,
+    state:req.body.state,
+    country:req.body.postcode,
     image:new_image,
 },(err, res)=>{
     if(err){
@@ -171,11 +169,6 @@ app.use("/images", express.static("public/img"));
 app.get('/', (req, res) => {
     res.render('home', { name: 'Ayesha Areej'})
 })
-
-//signup 
-app.use(fileUpload());
-app.use("/signup", userController.create);
-app.post("/user/create", userController.signup);
 
 
 
