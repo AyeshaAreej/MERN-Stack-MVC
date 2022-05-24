@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link  rel="stylesheet" href="main.css"/>
+   
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layouts/navbar.ejs'); %>
+     
+    <div class="text-center center" style="margin-top: 50px;"><h2>Register</h2></div>
+    <p></p>
+    
+     
+    <div class="container w-25 border py-5 text-center">
+        <form action="/add" method="post"  id="add-form"  enctype="multipart/form-data">
+            
+          
+            <div class="mb-3 ">
+                <!-- <label for="email1" class="form-label">Email</label> -->
+                <input class="form-control" type="text" name="name" class="form-control form-control-lg"  id="name" placeholder="Name"/>
+            </div>
+            <div class="mb-3 ">
+                <!-- <label for="email1" class="form-label">Email</label> -->
+                <input class="form-control" type="email" name="email" id="email1" placeholder="Email"/>
+            </div>
+            <div class="mb-3">
+                <!-- <label for="password1" class="form-label">password</label> -->
+                <input class="form-control" type="number" name="phone" id="phnnumber" placeholder="Phone Number"/>
+            </div>
+            <div class="mb-3 ">
+                <label for="image" class="form-label">Select Image</label>
+                <input type="file" name="image"/> 
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit" name="submit" >Add User</button>
+    
+            </div>
+        </form>
+    </div>
+    
+   
+    
+    
+</body>
+</html>
